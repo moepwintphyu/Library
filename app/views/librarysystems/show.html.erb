@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @librarysystem.Title %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @librarysystem.Tag %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @librarysystem.Content %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @librarysystem.Image %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @librarysystem.Reference %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @librarysystem.File %>
+</p>
+
+
+<%= link_to 'Edit', edit_librarysystem_path(@librarysystem) %> |
+<%= link_to 'Back', librarysystems_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @my_lib.Title %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @my_lib.Tag %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @my_lib.Content %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @my_lib.Image %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @my_lib.Reference %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @my_lib.File %>
+</p>
+
+
+<%= link_to 'Edit', edit_my_lib_path(@my_lib) %> |
+<%= link_to 'Back', my_libs_path %>

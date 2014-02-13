@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.Title %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @book.Tag %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @book.Content %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <!--<%= @book.Image %>-->
+  <%= image_tag(@book.Image_url :width => 600) if @book.Image.present? %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @book.Reference %>
+</p>
+
+<p>
+  <b>File:</b>
+ <%= @book.File %>
+  <!--<%= file_tag(@book.File_url) if @book.File.present? %>-->
+
+<!-- PaperClip -->
+<br/>
+
+
+<!--submit_tag "Save", data: { confirm :  "Are you sure?"}
+<a href="<%= @book.attach.url %> ">-->
+
+<%= link_to '<button type="button">Upload</button>'.html_safe, index_book_path,  :method => :save , :confirm => "Are you sure you want to save this file?" %>
+
+
+            <!--<b> File attached </b></a>-->
+             <br/>
+
+
+<!-- PaperClip -->
+<!--books_path(format: "upload"),-->
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

@@ -1,0 +1,33 @@
+<h1>Listing my_libs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Tag</th>
+    <th>Content</th>
+    <th>Image</th>
+    <th>Reference</th>
+    <th>File</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @my_libs.each do |my_lib| %>
+  <tr>
+    <td><%= my_lib.Title %></td>
+    <td><%= my_lib.Tag %></td>
+    <td><%= my_lib.Content %></td>
+    <td><%= my_lib.Image %></td>
+    <td><%= my_lib.Reference %></td>
+    <td><%= my_lib.File %></td>
+    <td><%= link_to 'Show', my_lib %></td>
+    <td><%= link_to 'Edit', edit_my_lib_path(my_lib) %></td>
+    <td><%= link_to 'Destroy', my_lib, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New My lib', new_my_lib_path %>

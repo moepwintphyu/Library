@@ -1,0 +1,33 @@
+<h1>Listing library_systems</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Tag</th>
+    <th>Content</th>
+    <th>Image</th>
+    <th>Reference</th>
+    <th>File</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @library_systems.each do |library_system| %>
+  <tr>
+    <td><%= library_system.Title %></td>
+    <td><%= library_system.Tag %></td>
+    <td><%= library_system.Content %></td>
+    <td><%= library_system.Image %></td>
+    <td><%= library_system.Reference %></td>
+    <td><%= library_system.File %></td>
+    <td><%= link_to 'Show', library_system %></td>
+    <td><%= link_to 'Edit', edit_library_system_path(library_system) %></td>
+    <td><%= link_to 'Destroy', library_system, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Library system', new_library_system_path %>

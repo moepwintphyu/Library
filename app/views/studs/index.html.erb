@@ -1,0 +1,25 @@
+<h1>Listing studs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @studs.each do |stud| %>
+  <tr>
+    <td><%= stud.name %></td>
+    <td><%= stud.age %></td>
+    <td><%= link_to 'Show', stud %></td>
+    <td><%= link_to 'Edit', edit_stud_path(stud) %></td>
+    <td><%= link_to 'Destroy', stud, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stud', new_stud_path %>

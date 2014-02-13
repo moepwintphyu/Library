@@ -1,0 +1,2 @@
+module MyBookStroesHelper
+end

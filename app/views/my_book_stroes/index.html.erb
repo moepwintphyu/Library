@@ -1,0 +1,33 @@
+<h1>Listing my_book_stroes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Tag</th>
+    <th>Content</th>
+    <th>Image</th>
+    <th>Reference</th>
+    <th>File</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @my_book_stroes.each do |my_book_stro| %>
+  <tr>
+    <td><%= my_book_stro.Title %></td>
+    <td><%= my_book_stro.Tag %></td>
+    <td><%= my_book_stro.Content %></td>
+    <td><%= my_book_stro.Image %></td>
+    <td><%= my_book_stro.Reference %></td>
+    <td><%= my_book_stro.File %></td>
+    <td><%= link_to 'Show', my_book_stro %></td>
+    <td><%= link_to 'Edit', edit_my_book_stro_path(my_book_stro) %></td>
+    <td><%= link_to 'Destroy', my_book_stro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New My book stroe', new_my_book_stro_path %>
